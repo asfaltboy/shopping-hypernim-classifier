@@ -1,22 +1,56 @@
+import os
 from functools import partial
 from copy import deepcopy
+from trello import TrelloClient
+from trello.card import Card
+from trello.checklist import Checklist
 
 from typing import List, Dict
 from mypy_extensions import TypedDict
 import json
 
-
 CheckItem = TypedDict("CheckItem", {"id": str, "name": str, "pos": str})
-Checklist = TypedDict(
-    "Checklist",
-    {"idCard": str, "id": str, "checkItems": List[CheckItem], "name": str},
-)
-Card = TypedDict(
-    "Card", {"id": str, "name": str, "checklists": List[Checklist]}
+
+SHOP_ROUTES = {"smart": ["bbq", "drinks", "diy", "vegetables", "dairy"]}
+
+trello = TrelloClient(
+    api_key=os.getenv("TRELLO_API_KEY"),
+    api_secret=os.getenv("TRELLO_API_SECRET"),
 )
 
 
-def get_card(card_file_path: str) -> Card:
+def get_shopping_cards() -> List[Card]:
+    """
+    Return a list of shopping cards sorted by creation date
+    in ascending order.
+    """
+    boards = trello.list_boards()
+    board = [b for b in boards if b.name == "Our Board"][0]
+    cards = board.open_cards()
+    return [
+        card
+        for card in sorted(
+            cards, key=lambda c: c.dateLastActivity, reverse=True
+        )
+        if card.name.lower() == "shopping"
+    ]
+
+
+def get_checklist_items(card: Card):
+    """
+    Return all item names in the first checklist of given card
+    """
+    checklist = card.checklists[0]
+    return [ci["name"] for ci in checklist.items]
+
+
+def get_card() -> Card:
+    first_shopping_card = get_shopping_cards()[0]
+    return first_shopping_card
+
+
+def get_card_from_file(card_file_path: str) -> Card:
+    """ Dummy getter for the file """
     with open(card_file_path) as file:
         return json.load(file)
 
@@ -24,12 +58,13 @@ def get_card(card_file_path: str) -> Card:
 def sort_checklists(card: Card, shop: str) -> List[Checklist]:
     """
     Sort a Trello card for all checklists using pre-defined sections for the given shop
-
-    :param fp: test_trello.py
     """
-    for checklist in card["checklists"]:
-        checklist["checkItems"] = sort_checklist(checklist["checkItems"], shop)
-    return card["checklists"]
+    preferred_shop_route = SHOP_ROUTES[shop]
+    for checklist in card.checklists:
+        checklist.items = sort_checklist(
+            checklist=checklist.items, route=preferred_shop_route
+        )
+    return card.checklists
 
 
 # TODO: find items' departments via nltk

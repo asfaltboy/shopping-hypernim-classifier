@@ -2,7 +2,7 @@ from copy import deepcopy
 
 import pytest
 
-from .trello import sort_checklist, Checklist
+from .trello_helpers import sort_checklist, Checklist
 
 
 def test_get_checklist():

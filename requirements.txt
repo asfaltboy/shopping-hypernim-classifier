@@ -1,0 +1,10 @@
+click
+click-repl
+ipython
+mypy
+mypy_extensions
+nltk
+pyspellchecker
+pytest
+pytest-mypy
+scrapy

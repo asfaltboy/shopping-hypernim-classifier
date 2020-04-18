@@ -1,0 +1,540 @@
+{
+    "id": "5d4e82b1d61983302dea279b",
+    "address": null,
+    "badges": {
+        "attachmentsByType": {
+            "trello": {
+                "board": 0,
+                "card": 0
+            }
+        },
+        "location": false,
+        "votes": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false,
+        "fogbugz": "",
+        "checkItems": 45,
+        "checkItemsChecked": 0,
+        "comments": 0,
+        "attachments": 0,
+        "description": false,
+        "due": null,
+        "dueComplete": false
+    },
+    "checkItemStates": [],
+    "closed": false,
+    "coordinates": null,
+    "creationMethod": null,
+    "dueComplete": false,
+    "dateLastActivity": "2019-08-10T09:36:12.891Z",
+    "desc": "",
+    "descData": null,
+    "due": null,
+    "dueReminder": null,
+    "email": "pavelsavchenk+2eop6u1ht2oa9pol381+2ssdk062lomgm89z3x7+0yinjk3col@boards.trello.com",
+    "idBoard": "50405db2569e17a377332e20",
+    "idChecklists": ["5d4e82b6f1d1794340295fc5", "5d4e8e1f40291b59633843bf"],
+    "idLabels": [],
+    "idList": "515531055e8f92365e001862",
+    "idMembers": [],
+    "idMembersVoted": [],
+    "idShort": 1110,
+    "idAttachmentCover": null,
+    "labels": [],
+    "limits": {
+        "attachments": {
+            "perCard": {
+                "status": "ok",
+                "disableAt": 1000,
+                "warnAt": 900
+            }
+        },
+        "checklists": {
+            "perCard": {
+                "status": "ok",
+                "disableAt": 500,
+                "warnAt": 450
+            }
+        },
+        "stickers": {
+            "perCard": {
+                "status": "ok",
+                "disableAt": 70,
+                "warnAt": 63
+            }
+        }
+    },
+    "locationName": null,
+    "manualCoverAttachment": false,
+    "name": "Shopping",
+    "pos": 65535,
+    "shortLink": "MZTFOcyr",
+    "shortUrl": "https://trello.com/c/MZTFOcyr",
+    "subscribed": false,
+    "url": "https://trello.com/c/MZTFOcyr/1110-shopping",
+    "checklists": [{
+        "id": "5d4e82b6f1d1794340295fc5",
+        "name": "Super",
+        "idBoard": "50405db2569e17a377332e20",
+        "idCard": "5d4e82b1d61983302dea279b",
+        "pos": 16384,
+        "limits": {
+            "checkItems": {
+                "perChecklist": {
+                    "status": "ok",
+                    "disableAt": 200,
+                    "warnAt": 180
+                }
+            }
+        },
+        "creationMethod": null,
+        "checkItems": [{
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e82b7ccb8513186f57701",
+            "name": "Milk",
+            "nameData": null,
+            "pos": 17311
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e82b9f2e0800aebc0fc93",
+            "name": "Tomatoes",
+            "nameData": null,
+            "pos": 34651
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e869794420e8768d7b0f2",
+            "name": "Vegan cheese",
+            "nameData": null,
+            "pos": 51559
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8745b10e5b2233fb8373",
+            "name": "Coke zero",
+            "nameData": null,
+            "pos": 68084
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e87bb4ae07515006b7a7f",
+            "name": "recycle garbage",
+            "nameData": null,
+            "pos": 84982
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e87d8abb2c98181c7204e",
+            "name": "black garbage bags",
+            "nameData": null,
+            "pos": 101771
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e87dd4c948d14f106b757",
+            "name": "sparkling water",
+            "nameData": null,
+            "pos": 118716
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e881427928a43945d39a8",
+            "name": "vegan humuous snack",
+            "nameData": null,
+            "pos": 135592
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8834bee4c766f3080444",
+            "name": "almonds milk",
+            "nameData": null,
+            "pos": 152499
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8864e050608dfc4b5143",
+            "name": "vegan cereals",
+            "nameData": null,
+            "pos": 169332
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e88822dea765cd6b7f5a3",
+            "name": "corn for barbeque",
+            "nameData": null,
+            "pos": 186709
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8893958b9314bd046867",
+            "name": "cherry tomatoes",
+            "nameData": null,
+            "pos": 203697
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e88be62cc0e6c11506b7a",
+            "name": "chicken breast",
+            "nameData": null,
+            "pos": 220351
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e88d651e72e33446f0f8f",
+            "name": "raspberies",
+            "nameData": null,
+            "pos": 432527
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e88ee4b97ce30fd92578c",
+            "name": "green  melon",
+            "nameData": null,
+            "pos": 254477
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e891412081230c5bd4539",
+            "name": "watermelon",
+            "nameData": null,
+            "pos": 271535
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e89271961f680be7c2268",
+            "name": "2/parmezan for Romania",
+            "nameData": null,
+            "pos": 288159
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8938087e8f0510c50e35",
+            "name": "bacon snacks tiger",
+            "nameData": null,
+            "pos": 304699
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8947e37fe11636d1205f",
+            "name": "long dry sausages",
+            "nameData": null,
+            "pos": 321427
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e896a3a8c593049f9c9c4",
+            "name": "pepeers red and green",
+            "nameData": null,
+            "pos": 338664
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e89bb8c949e2bc04df7a4",
+            "name": "popm poms",
+            "nameData": null,
+            "pos": 355671
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8a1e565ded04e94fc16d",
+            "name": "golden fish",
+            "nameData": null,
+            "pos": 373078
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8a627b95f93cc86ba740",
+            "name": "bread",
+            "nameData": null,
+            "pos": 389996
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8ab33f24ab169a5708a9",
+            "name": "cheddar chesse",
+            "nameData": null,
+            "pos": 407169
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8adba8e4515c55b281ae",
+            "name": "potatoes small bag",
+            "nameData": null,
+            "pos": 424177
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8ae2911c602348eda990",
+            "name": "carrots",
+            "nameData": null,
+            "pos": 440877
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8ae634a9613064353715",
+            "name": "quinoa",
+            "nameData": null,
+            "pos": 457385
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8af592d7bb32ba9ed9f8",
+            "name": "ginger small piece",
+            "nameData": null,
+            "pos": 474027
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8b088363df85979bf359",
+            "name": "peaches",
+            "nameData": null,
+            "pos": 490984
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8b1e7641aa7a285273f6",
+            "name": "Tuk biscuits",
+            "nameData": null,
+            "pos": 508083
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8b8826e1002f9e09bfee",
+            "name": "apple  vinegar small size",
+            "nameData": null,
+            "pos": 524631
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8bf3aeac5937f05db2ea",
+            "name": "Toilet paper",
+            "nameData": null,
+            "pos": 355639
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8c56422f3981765f9518",
+            "name": "chargable batteries medium AA and small size AAA",
+            "nameData": null,
+            "pos": 541108
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8d20ea64af062f08d672",
+            "name": "coconut sugar",
+            "nameData": null,
+            "pos": 558076
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8d3f0a65a08196bd18cd",
+            "name": "oranges for juice",
+            "nameData": null,
+            "pos": 575161
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8d6a73849c610e947666",
+            "name": "apples",
+            "nameData": null,
+            "pos": 592527
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8d6f95cb5c86099d2673",
+            "name": "blueberriies",
+            "nameData": null,
+            "pos": 609570
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8d7ed30e6273c93346f0",
+            "name": "oranges for juice",
+            "nameData": null,
+            "pos": 626331
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8db0bf188727ba5b364a",
+            "name": "eggs",
+            "nameData": null,
+            "pos": 642753
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8ecd79c14544b6915c45",
+            "name": "mixed nuts",
+            "nameData": null,
+            "pos": 659194
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8eda1ef7e324b11921ec",
+            "name": "cream",
+            "nameData": null,
+            "pos": 675585
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8ee399878567cc7d7734",
+            "name": "macarpone",
+            "nameData": null,
+            "pos": 692724
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e8f0d47687f0ad65d08a8",
+            "name": "beer",
+            "nameData": null,
+            "pos": 709245
+        }, {
+            "idChecklist": "5d4e82b6f1d1794340295fc5",
+            "state": "incomplete",
+            "id": "5d4e900c27c033599630d5e1",
+            "name": "hangers with clips and without",
+            "nameData": null,
+            "pos": 726052
+        }]
+    }, {
+        "id": "5d4e8e1f40291b59633843bf",
+        "name": "Butcher",
+        "idBoard": "50405db2569e17a377332e20",
+        "idCard": "5d4e82b1d61983302dea279b",
+        "pos": 32768,
+        "limits": {
+            "checkItems": {
+                "perChecklist": {
+                    "status": "ok",
+                    "disableAt": 200,
+                    "warnAt": 180
+                }
+            }
+        },
+        "creationMethod": null,
+        "checkItems": [{
+            "idChecklist": "5d4e8e1f40291b59633843bf",
+            "state": "incomplete",
+            "id": "5d4e8e2f4a260f23401e29b0",
+            "name": "usd beef steak 2 fingers tick",
+            "nameData": {
+                "emoji": {}},
+            "pos": 17243
+        }, {
+            "idChecklist": "5d4e8e1f40291b59633843bf",
+            "state": "incomplete",
+            "id": "5d4e8e2f4a260f23401e29b2",
+            "name": "macarpone",
+            "nameData": {
+                "emoji": {}},
+            "pos": 17244
+        }]
+    }],
+    "customFieldItems": [],
+    "members": [],
+    "pluginData": [],
+    "actions": [{
+        "id": "5d4e8e1f40291b59633843c1",
+        "idMemberCreator": "50f694881e8fcfb96400ba08",
+        "data": {
+            "card": {
+                "id": "5d4e82b1d61983302dea279b",
+                "name": "Shopping",
+                "idShort": 1110,
+                "shortLink": "MZTFOcyr"
+            },
+            "checklist": {
+                "id": "5d4e8e1f40291b59633843bf",
+                "name": "Checklist"
+            },
+            "board": {
+                "id": "50405db2569e17a377332e20",
+                "name": "Our Board",
+                "shortLink": "YCbXJ8Hb"
+            }
+        },
+        "type": "addChecklistToCard",
+        "date": "2019-08-10T09:27:59.949Z",
+        "limits": {},
+        "memberCreator": {
+            "id": "50f694881e8fcfb96400ba08",
+            "avatarHash": "d2d0c3b5029e46c950908de985b29910",
+            "avatarUrl": "https://trello-avatars.s3.amazonaws.com/d2d0c3b5029e46c950908de985b29910",
+            "fullName": "Ana Maria Grigore",
+            "idMemberReferrer": null,
+            "initials": "AG",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "anamariagrigore"
+        }
+    }, {
+        "id": "5d4e82b6f1d1794340295fc7",
+        "idMemberCreator": "504058d20da607b133662f91",
+        "data": {
+            "card": {
+                "id": "5d4e82b1d61983302dea279b",
+                "name": "Shopping",
+                "idShort": 1110,
+                "shortLink": "MZTFOcyr"
+            },
+            "checklist": {
+                "id": "5d4e82b6f1d1794340295fc5",
+                "name": "Checklist"
+            },
+            "board": {
+                "id": "50405db2569e17a377332e20",
+                "name": "Our Board",
+                "shortLink": "YCbXJ8Hb"
+            }
+        },
+        "type": "addChecklistToCard",
+        "date": "2019-08-10T08:39:18.258Z",
+        "limits": {},
+        "memberCreator": {
+            "id": "504058d20da607b133662f91",
+            "avatarHash": "5324b6633dd65bcc117ff51a0d31d19f",
+            "avatarUrl": "https://trello-avatars.s3.amazonaws.com/5324b6633dd65bcc117ff51a0d31d19f",
+            "fullName": "Pavel Savchenko",
+            "idMemberReferrer": null,
+            "initials": "PS",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "pavelsavchenko"
+        }
+    }, {
+        "id": "5d4e82b1d61983302dea279c",
+        "idMemberCreator": "504058d20da607b133662f91",
+        "data": {
+            "card": {
+                "id": "5d4e82b1d61983302dea279b",
+                "name": "Shopping",
+                "idShort": 1110,
+                "shortLink": "MZTFOcyr"
+            },
+            "list": {
+                "id": "515531055e8f92365e001862",
+                "name": "Doing"
+            },
+            "board": {
+                "id": "50405db2569e17a377332e20",
+                "name": "Our Board",
+                "shortLink": "YCbXJ8Hb"
+            }
+        },
+        "type": "createCard",
+        "date": "2019-08-10T08:39:13.500Z",
+        "limits": {},
+        "memberCreator": {
+            "id": "504058d20da607b133662f91",
+            "avatarHash": "5324b6633dd65bcc117ff51a0d31d19f",
+            "avatarUrl": "https://trello-avatars.s3.amazonaws.com/5324b6633dd65bcc117ff51a0d31d19f",
+            "fullName": "Pavel Savchenko",
+            "idMemberReferrer": null,
+            "initials": "PS",
+            "nonPublic": {},
+            "nonPublicAvailable": false,
+            "username": "pavelsavchenko"
+        }
+    }]
+}

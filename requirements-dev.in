@@ -1,0 +1,7 @@
+-c requirements.txt
+
+ipython
+mypy
+mypy_extensions
+pytest
+pytest-mypy

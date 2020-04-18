@@ -17,7 +17,7 @@ Flow
 1. Download shopping card from Trello in JSON format
 2. Parse the card JSON and retreive checklist items
 3. Iterate over all items, and fetch hypernims for all synonymous words
-4. Provide prompts to user if unmpet category to:
+4. Provide prompts to user if unknown category to:
 
    - offer to fix typos using e.g the gensim package
    - display category for the (corrected) item
@@ -25,3 +25,21 @@ Flow
    - optionally enter custom/new category
 
 5. Select supermarket and display the route through departments
+
+Developement
+~~~~~~~~~~~~
+
+To update dependencies use pip-tools_:
+
+.. code-block::
+
+   pip install -r requirements.lock -r requirements-dev.lock
+
+To update dependencies use dephell convert:
+
+.. code-block::
+
+   pip-compile requirements.txt
+   pip-compile requirements-dev.txt
+
+.. _pip-tools: https://github.com/jazzband/pip-tools

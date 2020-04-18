@@ -33,7 +33,7 @@ To update dependencies use pip-tools_:
 
 .. code-block::
 
-   pip install -r requirements.lock -r requirements-dev.lock
+   pip install -r requirements.txt -r requirements-dev.txt
 
 To update dependencies use dephell convert:
 

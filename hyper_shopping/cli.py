@@ -71,14 +71,14 @@ def choose_checklist(checklists, **kwargs):
 
 
 def get_checklist():
-    ...  # get user's trello card matching ID
+    # TODO: get user's trello card matching ID
     card = trello.get_card(card_file_path="shopping.json")
     if not yes_no_dialog(
         title="Card found", text=f"Is '{card['name']}' the right card?"
     ):
         return
 
-    checklists = trello.get_checklists(card)
+    checklists = trello.sort_checklists(card, "smart")
     if not checklists:
         return message_dialog(title="Error", text="This card has no checklists!")
 

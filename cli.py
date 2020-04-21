@@ -1,3 +1,18 @@
+"""
+
+TODO:
+1. Write short intro for document
+2. Add display command for:
+   known-categories
+   item-categories
+   category-synonyms
+   shop-routes
+   shopping-lists
+3. Add an add-shop-route command
+4. Add a get list from trello command
+5. Add a shopping list by shop-route command
+"""
+
 from pprint import pprint
 import re
 import shelve
@@ -73,7 +88,7 @@ def choose_category(item, hypernims, **kwargs):
 
 
 def choose_spelling(candidates, **kwargs):
-    return button_dialog(
+    return radiolist_dialog(
         title="Unknown word",
         text="Did you mean?",
         buttons=make_labels(candidates) + [("*Custom*", None)],
@@ -88,31 +103,52 @@ def choose_checklist(checklists, **kwargs):
     )
 
 
+def choose_category_synonym(item, hypernims, **kwargs):
+    synonym = radiolist_dialog(
+        values=make_labels(hypernims),
+        title="Hypernims without category found",
+        text=f"Which hypernim is synonymous with a category for the item '{item}'?",
+    ).run()
+    if not synonym:
+        return
+
+    known_categories = storage.get_known_categories()
+    category = radiolist_dialog(
+        values=make_labels(sorted(known_categories)),
+        title=f"Choose category for '{synonym}'",
+        text=f"Which category is '{synonym}' synonymous with?",
+    ).run()
+    if not category:
+        category = input_dialog(
+            title=f"Add a new category synonymous with '{synonym}'",
+        ).run()
+    if not category:
+        category = input_dialog(
+            title="Unknown category",
+            text=f"What is the category for synonym '{item}'",
+        ).run()
+    if category:
+        storage.add_category_synonym(synonym, category)
+
+    return category
+
+
 def get_checklist():
     # TODO: get user's trello card matching ID
     card = get_card()
-    if not yes_no_dialog(
-        title="Card found", text=f"Is '{card.name}' the right card?"
-    ).run():
+    card_prompt_result = yes_no_dialog(
+        title="Card found",
+        text=f"Is '{card.name}' (from {card.dateLastActivity}) the right card?",
+    ).run()
+    if not card_prompt_result:
         return
 
     items = get_checklist_items(card)
     print(*items, sep="\n")
     return items
 
-    # checklists = trello.sort_checklists(card, "smart")
-    # if not checklists:
-    #     return message_dialog(
-    #         title="Error", text="This card has no checklists!"
-    #     ).run()
 
-    # if len(checklists) > 1:
-    #     return choose_checklist(checklists)
-    # else:
-    #     return checklists[0]
-
-
-def get_hypernims(synsets: List) -> List:
+def get_hypernims(item: str) -> List:
     """
     Unpack a list of synsets into a list of lemma names pertaining to each
     matched hypernim.
@@ -120,6 +156,7 @@ def get_hypernims(synsets: List) -> List:
     :param synsets: a list of nltk.corpus.reader.wordnet.Synset
     :type synsets: List
     """
+    synsets = wn.synsets(item)
     hypernim_paths = [
         paths for synset in synsets for paths in synset.hypernym_paths()
     ]
@@ -147,15 +184,17 @@ def category_from_hypernims(item, hypernims):
     """
     Given a list of hypernims for item, choose a category
     """
-    categories = get_valid_categories(hypernims)
+    sorted_hypernims = sorted(set(hypernims))
+    categories = sorted(set(get_valid_categories(hypernims)))
     if categories:
-        category = choose_category(item, set(categories))
+        category = choose_category(item, categories)
     else:
-        category = choose_category(item, set(hypernims))
-    if category:
-        return category
+        category = choose_category(item, sorted_hypernims)
+    if not category:
+        category = choose_category_synonym(item, sorted_hypernims)
 
-    raise Exception("Pick a category: %s" % hypernims)
+    assert category, f"Fail: choose a category from: {sorted_hypernims}!"
+    return category
 
 
 def normalize_word(item):
@@ -188,38 +227,53 @@ def test_typos(item):
 def get_category(item):
     # replace all spaces with '_' for synset lookup to work
     normalized_item = normalize_word(item)
-    synsets = wn.synsets(normalized_item)
-    hypernims = get_hypernims(synsets)
+    hypernims = get_hypernims(normalized_item)
     words_in_item = item.split()
     if not hypernims:
-        if len(words_in_item) > 1:
-            # sentence unmatchable
-            word = choose_word(item)
-            if not word:
-                item = test_typos(item)
-            assert item, "no word chosen"
-            normalized_item = normalize_word(item)
+        # sentence unmatchable
+        word = choose_word(item)
+        if not word:
+            word = test_typos(item)
+        assert item, "no word chosen"
+        normalized_item = normalize_word(word)
 
-    synsets = wn.synsets(normalized_item)
-    hypernims = get_hypernims(synsets)
+    hypernims = get_hypernims(normalized_item)
     if hypernims:
         return category_from_hypernims(normalized_item, hypernims)
 
-    if not spell.unknown(words_in_item):
-        # handle unknown category:
-        # 1. check if it's in known categories
-        # 2. if not, ask user to confirm they want to add it
-        # 3. return the category
-        category = input_dialog(
-            title="Unknown category", text="What is the category for this item"
+    # handle unknown category:
+    # 1. check if it's in known categories
+    # 2. if not, ask user to confirm they want to add it
+    # 3. return the category
+    category = input_dialog(
+        title="Unknown category", text=f"What is the category for {item}"
+    ).run()
+    return category
+
+
+def create_shopping_card():
+    items = []
+    result = ""
+    while result is not None:
+        result = input_dialog(
+            title="Add shopping item",
+            ok_text="Add more",
+            cancel_text="Finished",
         ).run()
-        return category
+        if result:
+            items.append(result)
 
-    item = test_typos(normalized_item)
-    synsets = wn.synsets(item)
-    hypernims = get_hypernims(synsets)
-    if hypernims:
-        return category_from_hypernims(normalized_item, hypernims)
+    print(items)
+
+    item_list = "\n".join(items)
+    response = yes_no_dialog(
+        title="Done?",
+        text=(
+            f"You've entered the following items: "
+            f"\n{item_list}\n would you like to "
+            f"create the card?"
+        ),
+    ).run()
 
 
 dummy_words = [
@@ -254,18 +308,14 @@ dummy_words = [
     "Polenta",
     "Strawberries",
     "Sugar",
+    "toilet paper",
+    "pastizzi",
+    "canned peas",
 ]
 
 
 @cli.command()
-def get_items_from_checklists():
-    """
-    Fetch shopping card checklists and try to place the items in their
-    related shopping categories, using a combination of nltk wordnet
-    search as well manual choices to disambiguate.
-    """
-    # checklist = get_checklist()
-
+def get_categories():
     for i, item in enumerate(dummy_words):
         click.echo(f"{i}. '{item}'")
         stored_category = storage.get_item_category(item)
@@ -278,9 +328,32 @@ def get_items_from_checklists():
 
     pprint(storage.data["item_categories"])
 
-    # improve spell check on items such as:
-    # item = "usd beef steak 2 fingers tick"
-    # choose_word(item)
+
+@cli.command()
+def get_items_from_checklists():
+    """
+    Fetch shopping card checklists and try to place the items in their
+    related shopping categories, using a combination of nltk wordnet
+    search as well manual choices to disambiguate.
+    """
+    checklist = get_checklist()
+    if checklist:
+        print(*checklist, sep="\n")
+        return
+
+    should_create_card = yes_no_dialog(
+        title="Card not found", text=f"Shall we create a new shopping card?",
+    ).run()
+    print(should_create_card)
+    if not should_create_card:
+        return
+
+    create_shopping_card()
+
+
+@cli.command()
+def create():
+    create_shopping_card()
 
 
 if __name__ == "__main__":

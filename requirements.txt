@@ -18,7 +18,7 @@ hyperlink==19.0.0         # via twisted
 idna==2.9                 # via hyperlink, requests
 incremental==17.5.0       # via twisted
 joblib==0.14.1            # via nltk
-lxml==4.5.0               # via parsel, scrapy
+lxml==4.6.2               # via parsel, scrapy
 nltk==3.5                 # via -r requirements.in
 oauthlib==3.1.0           # via requests-oauthlib
 parsel==1.5.2             # via scrapy

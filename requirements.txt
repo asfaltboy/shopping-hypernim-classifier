@@ -4,49 +4,123 @@
 #
 #    pip-compile
 #
-attrs==19.3.0             # via automat, service-identity, twisted
-automat==20.2.0           # via twisted
-certifi==2020.4.5.1       # via requests
-cffi==1.14.0              # via cryptography
-chardet==3.0.4            # via requests
-click-repl==0.1.6         # via -r requirements.in
-click==7.1.1              # via -r requirements.in, click-repl, nltk
-constantly==15.1.0        # via twisted
-cryptography==3.2         # via pyopenssl, scrapy, service-identity
-cssselect==1.1.0          # via parsel, scrapy
-hyperlink==19.0.0         # via twisted
-idna==2.9                 # via hyperlink, requests
-incremental==17.5.0       # via twisted
-joblib==0.14.1            # via nltk
-lxml==4.5.0               # via parsel, scrapy
-nltk==3.5                 # via -r requirements.in
-oauthlib==3.1.0           # via requests-oauthlib
-parsel==1.5.2             # via scrapy
-prompt-toolkit==3.0.5     # via click-repl
-protego==0.1.16           # via scrapy
-py-trello==0.16.0         # via -r requirements.in
-pyasn1-modules==0.2.8     # via service-identity
-pyasn1==0.4.8             # via pyasn1-modules, service-identity
-pycparser==2.20           # via cffi
-pydispatcher==2.0.5       # via scrapy
-pyhamcrest==2.0.2         # via twisted
-pyopenssl==19.1.0         # via scrapy
-pyspellchecker==0.5.4     # via -r requirements.in
-python-dateutil==2.8.1    # via py-trello
-pytz==2019.3              # via py-trello
-queuelib==1.5.0           # via scrapy
-regex==2020.4.4           # via nltk
-requests-oauthlib==1.3.0  # via py-trello
-requests==2.23.0          # via py-trello, requests-oauthlib
-scrapy==2.0.1             # via -r requirements.in
-service-identity==18.1.0  # via scrapy
-six==1.14.0               # via automat, click-repl, cryptography, parsel, protego, pyopenssl, python-dateutil, w3lib
-tqdm==4.45.0              # via nltk
-twisted==20.3.0           # via scrapy
-urllib3==1.25.9           # via requests
-w3lib==1.21.0             # via parsel, scrapy
-wcwidth==0.1.9            # via prompt-toolkit
-zope.interface==5.1.0     # via scrapy, twisted
+attrs==19.3.0
+    # via
+    #   automat
+    #   service-identity
+    #   twisted
+automat==20.2.0
+    # via twisted
+certifi==2020.4.5.1
+    # via requests
+cffi==1.14.0
+    # via cryptography
+chardet==3.0.4
+    # via requests
+click-repl==0.1.6
+    # via -r requirements.in
+click==7.1.1
+    # via
+    #   -r requirements.in
+    #   click-repl
+    #   nltk
+constantly==15.1.0
+    # via twisted
+cryptography==3.2
+    # via
+    #   pyopenssl
+    #   scrapy
+    #   service-identity
+cssselect==1.1.0
+    # via
+    #   parsel
+    #   scrapy
+hyperlink==19.0.0
+    # via twisted
+idna==2.9
+    # via
+    #   hyperlink
+    #   requests
+incremental==17.5.0
+    # via twisted
+joblib==0.14.1
+    # via nltk
+lxml==4.6.3
+    # via
+    #   parsel
+    #   scrapy
+nltk==3.5
+    # via -r requirements.in
+oauthlib==3.1.0
+    # via requests-oauthlib
+parsel==1.5.2
+    # via scrapy
+prompt-toolkit==3.0.5
+    # via click-repl
+protego==0.1.16
+    # via scrapy
+py-trello==0.16.0
+    # via -r requirements.in
+pyasn1-modules==0.2.8
+    # via service-identity
+pyasn1==0.4.8
+    # via
+    #   pyasn1-modules
+    #   service-identity
+pycparser==2.20
+    # via cffi
+pydispatcher==2.0.5
+    # via scrapy
+pyhamcrest==2.0.2
+    # via twisted
+pyopenssl==19.1.0
+    # via scrapy
+pyspellchecker==0.5.4
+    # via -r requirements.in
+python-dateutil==2.8.1
+    # via py-trello
+pytz==2019.3
+    # via py-trello
+queuelib==1.5.0
+    # via scrapy
+regex==2020.4.4
+    # via nltk
+requests-oauthlib==1.3.0
+    # via py-trello
+requests==2.23.0
+    # via
+    #   py-trello
+    #   requests-oauthlib
+scrapy==2.0.1
+    # via -r requirements.in
+service-identity==18.1.0
+    # via scrapy
+six==1.14.0
+    # via
+    #   automat
+    #   click-repl
+    #   cryptography
+    #   parsel
+    #   protego
+    #   pyopenssl
+    #   python-dateutil
+    #   w3lib
+tqdm==4.45.0
+    # via nltk
+twisted==20.3.0
+    # via scrapy
+urllib3==1.25.9
+    # via requests
+w3lib==1.21.0
+    # via
+    #   parsel
+    #   scrapy
+wcwidth==0.1.9
+    # via prompt-toolkit
+zope.interface==5.1.0
+    # via
+    #   scrapy
+    #   twisted
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

@@ -45,7 +45,7 @@ incremental==17.5.0
     # via twisted
 joblib==0.14.1
     # via nltk
-lxml==4.5.0
+lxml==4.6.5
     # via
     #   parsel
     #   scrapy

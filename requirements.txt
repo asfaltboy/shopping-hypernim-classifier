@@ -35,6 +35,14 @@ cssselect==1.1.0
     # via
     #   parsel
     #   scrapy
+h2==3.2.0
+    # via
+    #   scrapy
+    #   twisted
+hpack==3.0.0
+    # via h2
+hyperframe==5.2.0
+    # via h2
 hyperlink==19.0.0
     # via twisted
 idna==2.9
@@ -43,6 +51,14 @@ idna==2.9
     #   requests
 incremental==17.5.0
     # via twisted
+itemadapter==0.4.0
+    # via
+    #   itemloaders
+    #   scrapy
+itemloaders==1.0.4
+    # via scrapy
+jmespath==0.10.0
+    # via itemloaders
 joblib==0.14.1
     # via nltk
 lxml==4.6.5
@@ -54,7 +70,11 @@ nltk==3.6.6
 oauthlib==3.1.0
     # via requests-oauthlib
 parsel==1.5.2
-    # via scrapy
+    # via
+    #   itemloaders
+    #   scrapy
+priority==1.3.0
+    # via twisted
 prompt-toolkit==3.0.5
     # via click-repl
 protego==0.1.16
@@ -91,7 +111,7 @@ requests==2.23.0
     #   requests-oauthlib
 requests-oauthlib==1.3.0
     # via py-trello
-scrapy==2.0.1
+scrapy==2.5.1
     # via -r requirements.in
 service-identity==18.1.0
     # via scrapy
@@ -107,12 +127,13 @@ six==1.14.0
     #   w3lib
 tqdm==4.45.0
     # via nltk
-twisted==20.3.0
+twisted[http2]==20.3.0
     # via scrapy
 urllib3==1.25.9
     # via requests
 w3lib==1.21.0
     # via
+    #   itemloaders
     #   parsel
     #   scrapy
 wcwidth==0.1.9
